@@ -6,6 +6,7 @@ dependencies:
     - pandas
     - python-dotenv
     - streamlit
+    - altair
     - boto3
     - ipykernel
     - vaderSentiment
