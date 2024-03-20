@@ -1,15 +1,30 @@
 name: simple-streamlit
 dependencies:
-  - python
-  - python-dotenv
+  - python=3.10
   - pip
   - pip:
-    - pandas
-    #- python-dotenv
-    - streamlit
-    - boto3
+    - altair
+    - b2
+    - b2sdk
+    - cachetools
+    - decorator
+    - exceptiongroup
+    - gitdb
+    - gunicorn
+    - GitPython
+    - idna
     - ipykernel
-    - vaderSentiment
-    - plotly==5.19.0
-    # - scikit-learn
-    # - seaborn
+    - ipython
+    - matplotlib
+    - matplotlib-inline
+    - numpy
+    - pandas
+    - python-dotenv
+    - requests
+    - s3transfer
+    - scikit-learn
+    - scipy
+    - seaborn
+    - streamlit
+    - toml
+    - tqdm
