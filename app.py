@@ -1,9 +1,10 @@
 import os
+import io
 import pickle
-
+import altair as alt
 import streamlit as st
 from dotenv import load_dotenv
-
+load_dotenv()
 from utils.b2 import B2
 from utils.modeling import *
 
@@ -11,7 +12,7 @@ from utils.modeling import *
 # ------------------------------------------------------
 #                      APP CONSTANTS
 # ------------------------------------------------------
-REMOTE_DATA = 'coffee_analysis_w_sentiment.csv'
+REMOTE_DATA = 'Apple-Twitter-Sentiment-DFE_encoded11.csv'
 
 
 # ------------------------------------------------------
@@ -30,15 +31,13 @@ b2 = B2(endpoint=os.environ['B2_ENDPOINT'],
 # ------------------------------------------------------
 @st.cache_data
 def get_data():
+
     # collect data frame of reviews and their sentiment
     b2.set_bucket(os.environ['B2_BUCKETNAME'])
-    df_coffee = b2.get_df(REMOTE_DATA)
-
-    # average sentiment scores for the whole dataset
-    benchmarks = df_coffee[['neg', 'neu', 'pos', 'compound']] \
-                    .agg(['mean', 'median'])
-    
-    return df_coffee, benchmarks
+    df_apple = b2.get_df(REMOTE_DATA)
+    df_apple['date'] = pd.to_datetime(df_apple['date'], format='%a %b %d %H:%M:%S %z %Y')
+    df_apple['day_month_year'] = df_apple['date'].dt.strftime('%d/%m/%Y')  
+    return df_apple
 
 
 @st.cache_resource
@@ -48,36 +47,19 @@ def get_model():
     
     return analyzer
 
-# ------------------------------------------------------
-#                         APP
-# ------------------------------------------------------
-# ------------------------------
-# PART 0 : Overview
-# ------------------------------
-st.write(
-'''
-# Review Sentiment Analysis
-We pull data from our Backblaze storage bucket, and render it in Streamlit.
-''')
+st.title("Sentiment Confidence by Day")
 
-df_coffee, benchmarks = get_data()
+df_apple = get_data()
 analyzer = get_model()
 
 # ------------------------------
 # PART 1 : Filter Data
 # ------------------------------
-roast = st.selectbox("Select a roast:",
-                     df_coffee['roast'].unique())
 
-loc_country = st.selectbox("Select a roaster location:",
-                     df_coffee['loc_country'].unique())
+ 
+df_apple = df_apple.rename(columns={'sentiment:confidence': 'sentiment_confidence'})
+df_filtered = df_apple.groupby('day_month_year')['sentiment_confidence'].mean().reset_index()
 
-df_filtered = filter_coffee(roast, loc_country, df_coffee)
-
-st.write(
-'''
-**Your filtered data:**
-''')
 
 st.dataframe(df_filtered)
 
@@ -85,31 +67,15 @@ st.dataframe(df_filtered)
 # PART 2 : Plot
 # ------------------------------
 
-st.write(
-'''
-## Visualize
-Compare this subset of reviews with the rest of the data.
-'''
-)
 
-fig = plot_sentiment(df_filtered, benchmarks)
-st.plotly_chart(fig)
 
-# ------------------------------
-# PART 3 : Analyze Input Sentiment
-# ------------------------------
+chart = alt.Chart(df_filtered).mark_bar().encode(
+            x='day_month_year',
+            y='sentiment_confidence',
+            tooltip=['day_month_year', 'sentiment_confidence']
+        ).properties(
+            width=800,
+            height=500
+        ).interactive()
+st.altair_chart(chart, use_container_width=True)
 
-st.write(
-'''
-## Custom Sentiment Check
-
-Compare these results with the sentiment scores of your own input.
-'''
-)
-
-text = st.text_input("Write a paragraph, if you like.", 
-                     "Your text here.")
-
-df_sentiment = get_sentence_sentiment(text, analyzer)
-
-st.dataframe(df_sentiment)
