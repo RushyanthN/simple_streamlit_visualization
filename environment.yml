@@ -1,10 +1,11 @@
 name: simple-streamlit
 dependencies:
   - python=3.10
+  - python-dotenv
   - pip
   - pip:
     - pandas
-    - python-dotenv
+    #- python-dotenv
     - streamlit
     - boto3
     - ipykernel
