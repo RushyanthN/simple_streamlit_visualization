@@ -124,11 +124,11 @@ smmap==5.0.1
 sniffio==1.3.1
 soupsieve==2.5
 stack-data==0.6.3
-streamlit
+streamlit==1.32.2
 tenacity==8.2.3
 terminado==0.18.0
 threadpoolctl==3.2.0
-tinycss2==1.2.1
+tinycss2==1.2.1c
 toml==0.10.2
 tomli==2.0.1
 toolz==0.12.0
