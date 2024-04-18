@@ -1,4 +1,4 @@
-altair @ file:///home/conda/feedstock_root/build_artifacts/altair-split_1711824856061/work
+altair>=4.2.2
 asttokens==2.4.1
 attrs @ file:///home/conda/feedstock_root/build_artifacts/attrs_1704011227531/work
 blinker @ file:///home/conda/feedstock_root/build_artifacts/blinker_1698890160476/work
