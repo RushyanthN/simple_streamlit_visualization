@@ -65,7 +65,7 @@ df_filtered = df_apple.groupby('day_month_year')['sentiment_confidence'].mean().
 st.dataframe(df_filtered)
 
 # ------------------------------
-# PART 2 : Plot
+# PART 2 : Plots
 # ------------------------------
 
 
