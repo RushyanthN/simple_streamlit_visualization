@@ -67,7 +67,7 @@ st.dataframe(df_filtered)
 # ------------------------------
 # PART 2 : Plots
 # ------------------------------
-
+#gfh
 
 
 chart = alt.Chart(df_filtered).mark_bar().encode(
