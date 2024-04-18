@@ -1,104 +1,151 @@
-altair>=4.2.2
+altair==5.1.2
+ansi2html==1.9.1
+anyio==4.3.0
+appnope==0.1.3
+argon2-cffi==23.1.0
+argon2-cffi-bindings==21.2.0
+arrow==1.3.0
 asttokens==2.4.1
-attrs @ file:///home/conda/feedstock_root/build_artifacts/attrs_1704011227531/work
-blinker @ file:///home/conda/feedstock_root/build_artifacts/blinker_1698890160476/work
-boto3==1.34.86
-botocore==1.34.86
-Bottleneck @ file:///C:/b/abs_f7un855idq/croot/bottleneck_1709069969633/work
-Brotli @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/brotli-split_1699473013692/work
-cachetools @ file:///home/conda/feedstock_root/build_artifacts/cachetools_1708987703938/work
-certifi @ file:///C:/b/abs_35d7n66oz9/croot/certifi_1707229248467/work/certifi
-charset-normalizer @ file:///home/conda/feedstock_root/build_artifacts/charset-normalizer_1698833585322/work
-click @ file:///D:/bld/click_1692312014553/work
-colorama==0.4.6
-comm==0.2.1
-contourpy==1.2.1
+async-lru==2.0.4
+attrs==23.1.0
+Babel==2.14.0
+beautifulsoup4==4.12.3
+bleach==6.1.0
+blinker==1.7.0
+boto3
+botocore==1.31.84
+cachetools==5.3.2
+certifi==2023.7.22
+cffi==1.16.0
+charset-normalizer==3.3.2
+click==8.1.7
+comm==0.2.0
+contourpy==1.2.0
 cycler==0.12.1
+dash==2.16.0
+dash-core-components==2.0.0
+dash-html-components==2.0.0
+dash-table==5.0.0
 debugpy==1.8.0
 decorator==5.1.1
-exceptiongroup @ file:///home/conda/feedstock_root/build_artifacts/exceptiongroup_1704921103267/work
+defusedxml==0.7.1
+exceptiongroup==1.1.3
 executing==2.0.1
-fonttools==4.51.0
-gitdb @ file:///home/conda/feedstock_root/build_artifacts/gitdb_1697791558612/work
-GitPython @ file:///home/conda/feedstock_root/build_artifacts/gitpython_1711991025291/work
-idna @ file:///home/conda/feedstock_root/build_artifacts/idna_1713279365350/work
-importlib_metadata @ file:///home/conda/feedstock_root/build_artifacts/importlib-metadata_1710971335535/work
-importlib_resources @ file:///home/conda/feedstock_root/build_artifacts/importlib_resources_1711040877059/work
-ipykernel @ file:///D:/bld/ipykernel_1708996677248/work
-ipython==8.20.0
-ipywidgets @ file:///home/conda/feedstock_root/build_artifacts/ipywidgets_1707427226251/work
+fastjsonschema==2.19.1
+Flask==3.0.2
+fonttools==4.44.0
+fqdn==1.5.1
+gitdb==4.0.11
+GitPython==3.1.40
+gunicorn
+h11==0.14.0
+httpcore==1.0.4
+httpx==0.27.0
+idna==3.4
+importlib-metadata==6.8.0
+ipykernel==6.26.0
+ipython==8.17.2
+ipywidgets==8.1.2
+isoduration==20.11.0
+itsdangerous==2.1.2
 jedi==0.19.1
-Jinja2 @ file:///home/conda/feedstock_root/build_artifacts/jinja2_1704966972576/work
+Jinja2==3.1.2
 jmespath==1.0.1
-joblib==1.4.0
-jsonschema @ file:///home/conda/feedstock_root/build_artifacts/jsonschema-meta_1705707496704/work
-jsonschema-specifications @ file:///tmp/tmpkv1z7p57/src
+joblib==1.3.2
+json5==0.9.20
+jsonpointer==2.4
+jsonschema==4.19.2
+jsonschema-specifications==2023.7.1
+jupyter-dash==0.4.2
+jupyter-events==0.9.0
+jupyter-lsp==2.2.4
 jupyter_client==8.6.0
-jupyter_core==5.7.1
-jupyterlab_widgets @ file:///home/conda/feedstock_root/build_artifacts/jupyterlab_widgets_1707421892171/work
+jupyter_core==5.5.0
+jupyter_server==2.13.0
+jupyter_server_terminals==0.5.2
+jupyterlab==4.1.3
+jupyterlab_pygments==0.3.0
+jupyterlab_server==2.25.3
+jupyterlab_widgets==3.0.10
 kiwisolver==1.4.5
-markdown-it-py @ file:///home/conda/feedstock_root/build_artifacts/markdown-it-py_1686175045316/work
-MarkupSafe @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/markupsafe_1707425732791/work
-matplotlib==3.8.4
+markdown-it-py==3.0.0
+MarkupSafe==2.1.3
+matplotlib==3.8.1
 matplotlib-inline==0.1.6
-mdurl @ file:///home/conda/feedstock_root/build_artifacts/mdurl_1704317613764/work
-mkl-fft @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/mkl_fft_1699473528480/work
-mkl-random @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/mkl_random_1699473588250/work
-mkl-service==2.4.0
-nest-asyncio==1.5.9
-numexpr @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/numexpr_1699503421264/work
-numpy==1.26.4
+mdurl==0.1.2
+mistune==3.0.2
+nbclient==0.9.0
+nbconvert==7.16.2
+nbformat==5.9.2
+nest-asyncio==1.5.8
+nltk==3.8.1
+notebook_shim==0.2.4
+numpy==1.26.1
+overrides==7.7.0
 packaging==23.2
-pandas @ file:///C:/b/abs_3awk0iw2ab/croot/pandas_1709590545218/work/dist/pandas-2.2.1-cp312-cp312-win_amd64.whl#sha256=8f9837b9f672189b7e2df7dcf64b91243a78b0fad6e1125220b33a39b5c9e598
+pandas==2.1.3
+pandocfilters==1.5.1
 parso==0.8.3
-pickleshare @ file:///home/conda/feedstock_root/build_artifacts/pickleshare_1602536217715/work
-pillow @ file:///C:/b/abs_e22m71t0cb/croot/pillow_1707233126420/work
-pkgutil_resolve_name @ file:///home/conda/feedstock_root/build_artifacts/pkgutil-resolve-name_1694617248815/work
-platformdirs==4.1.0
+pexpect==4.8.0
+Pillow==10.1.0
+platformdirs==4.0.0
 plotly==5.19.0
-prompt-toolkit==3.0.43
-protobuf==3.20.3
-psutil==5.9.8
+prometheus_client==0.20.0
+prompt-toolkit==3.0.40
+protobuf==4.25.0
+psutil==5.9.6
+ptyprocess==0.7.0
 pure-eval==0.2.2
-pyarrow==15.0.2
-pydeck @ file:///home/conda/feedstock_root/build_artifacts/pydeck_1667589451974/work
-Pygments==2.17.2
-pyparsing==3.1.2
-PySocks @ file:///D:/bld/pysocks_1661604991356/work
+pyarrow==14.0.1
+pycparser==2.21
+pydeck==0.8.1b0
+Pygments==2.16.1
+pyparsing==3.1.1
 python-dateutil==2.8.2
-python-dotenv==1.0.1
-pytz @ file:///home/conda/feedstock_root/build_artifacts/pytz_1706886791323/work
-pywin32==306
-PyYAML @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/pyyaml_1699479991712/work
-pyzmq==25.1.2
-referencing @ file:///home/conda/feedstock_root/build_artifacts/referencing_1710763696991/work
-requests @ file:///home/conda/feedstock_root/build_artifacts/requests_1684774241324/work
-rich @ file:///home/conda/feedstock_root/build_artifacts/rich-split_1709150387247/work/dist
-rpds-py @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/rpds-py_1699565648947/work
-s3transfer==0.10.1
-scikit-learn==1.4.2
-scipy==1.13.0
-seaborn==0.13.2
-setuptools==68.2.2
+python-dotenv==1.0.0
+python-json-logger==2.0.7
+pytz==2023.3.post1
+PyYAML==6.0.1
+pyzmq==25.1.1
+referencing==0.30.2
+regex==2023.10.3
+requests==2.31.0
+retrying==1.3.4
+rfc3339-validator==0.1.4
+rfc3986-validator==0.1.1
+rich==13.6.0
+rpds-py==0.12.0
+s3transfer==0.7.0
+scikit-learn==1.3.2
+scipy==1.11.3
+Send2Trash==1.8.2
 six==1.16.0
-smmap @ file:///home/conda/feedstock_root/build_artifacts/smmap_1634310307496/work
+smmap==5.0.1
+sniffio==1.3.1
+soupsieve==2.5
 stack-data==0.6.3
-streamlit==1.33.0
-tenacity @ file:///home/conda/feedstock_root/build_artifacts/tenacity_1692026804430/work
-threadpoolctl==3.4.0
-toml @ file:///home/conda/feedstock_root/build_artifacts/toml_1604308577558/work
-toolz @ file:///home/conda/feedstock_root/build_artifacts/toolz_1706112571092/work
-tornado==6.4
-traitlets==5.14.1
-typing_extensions @ file:///home/conda/feedstock_root/build_artifacts/typing_extensions_1712329955671/work
-tzdata @ file:///home/conda/feedstock_root/build_artifacts/python-tzdata_1707747584337/work
-tzlocal @ file:///home/conda/feedstock_root/build_artifacts/tzlocal_1628866601165/work
-urllib3 @ file:///home/conda/feedstock_root/build_artifacts/urllib3_1708239446578/work
+streamlit==1.28.1
+tenacity==8.2.3
+terminado==0.18.0
+threadpoolctl==3.2.0
+tinycss2==1.2.1
+toml==0.10.2
+tomli==2.0.1
+toolz==0.12.0
+tornado==6.3.3
+traitlets==5.13.0
+types-python-dateutil==2.8.19.20240106
+typing_extensions==4.8.0
+tzdata==2023.3
+tzlocal==5.2
+uri-template==1.3.0
+urllib3
 vaderSentiment==3.3.2
-validators @ file:///home/conda/feedstock_root/build_artifacts/validators_1712223474089/work
-watchdog @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/watchdog_1699545798100/work
-wcwidth==0.2.13
-wheel==0.41.2
-widgetsnbextension @ file:///home/conda/feedstock_root/build_artifacts/widgetsnbextension_1707420319466/work
-win-inet-pton @ file:///D:/bld/win_inet_pton_1667051142467/work
-zipp @ file:///home/conda/feedstock_root/build_artifacts/zipp_1695255097490/work
+validators==0.22.0
+wcwidth==0.2.9
+webcolors==1.13
+webencodings==0.5.1
+websocket-client==1.7.0
+Werkzeug==3.0.1
+widgetsnbextension==4.0.10
+zipp==3.17.0
